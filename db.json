@@ -11,6 +11,12 @@
       "name": "picture",
       "category": "art",
       "price": 1500
+    },
+    {
+      "id": 4,
+      "name": "Apple",
+      "category": "Fruit",
+      "price": 5
     }
   ],
   "register": [

@@ -23,6 +23,7 @@ export class CreateComponent implements OnInit{
   create(){
     this.productService.create(this.productForm).subscribe({
       next:(data)=>{
+        alert('Product has been created.');
         this.router.navigate(["/products"])
       },
       error:(err)=>{
