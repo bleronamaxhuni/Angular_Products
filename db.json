@@ -1,0 +1,56 @@
+{
+  "products": [
+    {
+      "id": 2,
+      "name": "Vintage Dish",
+      "category": "test",
+      "price": 50
+    },
+    {
+      "id": 3,
+      "name": "picture",
+      "category": "art",
+      "price": 1500
+    }
+  ],
+  "register": [
+    {
+      "fullName": "Blerona Maxhuni",
+      "email": "bleronamaxhunni@gmail.com",
+      "phone": "383555555",
+      "password": "12345678",
+      "id": 1
+    },
+    {
+      "fullName": "Blerona Maxhuni",
+      "email": "bleronamaxhunni@gmail.com",
+      "phone": "+55555555",
+      "password": "12345678",
+      "id": 2
+    },
+    {
+      "fullName": "Test",
+      "email": "test@gmail.com",
+      "phone": "+658565",
+      "password": "12345678",
+      "id": 3
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

@@ -1,0 +1,20 @@
+<app-navbar></app-navbar>
+<div class="container py-5">
+    <form class="col-lg-7 m-auto p-5 pt-4 mt-5 shadow">
+        <legend class="text-center mb-5 fw-semibold">Edit Product</legend>
+        <div class="mb-3">
+            <label for="txtName" class="form-label">Name</label>
+            <input type="text" name="name" [(ngModel)]="productForm.name" class="form-control" id="txtName" />
+        </div>
+        <div class="mb-3">
+            <label for="txtCategory" class="form-label">Category</label>
+            <input type="text" name="category" [(ngModel)]="productForm.category" class="form-control"
+                id="txtCategory" />
+        </div>
+        <div class="mb-3">
+            <label for="txtPrice" class="form-label">Price</label>
+            <input type="number" name="price" [(ngModel)]="productForm.price" class="form-control" id="txtPrice" />
+        </div>
+        <button type="button" (click)="update()" class="btn btn-primary col-lg-12 mt-4">Update</button>
+    </form>
+</div>

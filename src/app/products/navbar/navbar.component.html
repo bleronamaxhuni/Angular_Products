@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-dark shadow">
+    <div class="container-fluid col-lg-9">
+        <a class="navbar-brand" [routerLink]="['/home']"><img src="../../assets/images/badge.png" alt="" width="40px" height="40px"></a>
+        <button class="navbar-toggler bg-dark" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-md-auto gap-2 mx-5 text-center d-sm">
+                <li class="nav-item rounded">
+                    <a class="nav-link text-black" aria-current="page" [routerLink]="['/home']">Home</a>
+                </li>
+                <li class="nav-item rounded">
+                    <a class="nav-link text-black"[routerLink]="['/products']">Products</a>
+                </li>
+            </ul>
+            <div class="logout-btn">
+                <button class="logout rounded border-0 bg-primary">
+                    <a class="nav-link text-white p-2 pt-1" [routerLink]="['/login']">
+                        <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14 20H6C4.89543 20 4 19.1046 4 18L4 6C4 4.89543 4.89543 4 6 4H14M10 12H21M21 12L18 15M21 12L18 9" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg></a>
+                </button>
+            </div>
+        </div>
+    </div>
+</nav>

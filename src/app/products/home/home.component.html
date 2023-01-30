@@ -1,0 +1,52 @@
+<app-navbar></app-navbar>
+<div class="container table-responsive py-5">
+    <div class="offset-md-4 d-flex justify-content-end py-4">
+        <a class="btn btn-primary text-end" routerLink="/products/create">Create</a>
+    </div>
+    <table class="table table-bordered table-hover">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col" class="text-center">Name</th>
+                <th scope="col" class="text-center">Category</th>
+                <th scope="col" class="text-center">Price</th>
+                <th scope="col" class="text-center">Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of allProducts">
+                <td class="text-center">{{ item.name }}</td>
+                <td class="text-center">{{ item.category }}</td>
+                <td class="text-center">{{ item.price | currency }}</td>
+                <td class="text-center">
+                    <div class="action-btn d-flex justify-content-evenly col-md-4 mx-auto">
+                        <a class="btn btn-primary" [routerLink]="['/products/edit', item.id]">Edit</a>
+                        <button type="button" (click)="openDeleteModal(item.id)" class="btn btn-danger">Delete</button>
+                    </div>
+                </td>
+
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Warning!</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" *ngFor="let item of allProducts.slice(0,1)">
+                Are you sure to delete {{item.name}}?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-danger" (click)="delete()">Confirm Delete</button>
+            </div>
+        </div>
+    </div>
+</div>

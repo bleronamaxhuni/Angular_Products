@@ -1,0 +1,26 @@
+.register,
+.image {
+    min-height: 100vh;
+}
+.register-account::after{
+    content: "";
+    display: block;
+    width: 10%;
+    height: 3px;
+    margin-top: 8px;
+    background: blue;
+    margin-inline: auto;
+}
+.bg-image {
+    background-image: url('../../assets/images/register.png');
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+.button-group{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.btn-primary{
+    width: 40%;
+}
